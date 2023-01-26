@@ -28,6 +28,11 @@ func (t Triangle) perimeter() float64 {
 
 }
 func main() {
+	// 4.
+	t1 := Triangle{
+		base:   7,
+		height: 10.5,
+	}
 
 	fmt.Println("Hello Cookie")
 
