@@ -3,6 +3,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 // 1.
@@ -15,6 +16,17 @@ func (t Triangle) area() float64 {
 	return (t.base * t.height) / 2
 }
 
+// 3.
+func (t Triangle) perimeter() float64 {
+	//we need the hypotenuse to do:  P = a+b+c
+	//hypotenues = square root (b^2 + a^2)
+	//find using some usefull function in the math library.
+	//	hypot := math.Sqrt((math.Pow(t.base, 2)) + (math.Pow(t.height, 2)))
+	hypotenuse := math.Hypot(t.base, t.height)
+
+	return t.base + t.height + hypotenuse
+
+}
 func main() {
 
 	fmt.Println("Hello Cookie")
