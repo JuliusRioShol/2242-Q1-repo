@@ -34,6 +34,10 @@ func main() {
 		height: 10.5,
 	}
 
-	fmt.Println("Hello Cookie")
+	//5.
+	a := t1.area()
+	p := t1.perimeter()
 
+	fmt.Println(a)
+	fmt.Println(p)
 }
