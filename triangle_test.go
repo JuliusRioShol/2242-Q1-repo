@@ -18,10 +18,11 @@ func TestArea(t *testing.T) {
 	expected := 6.25
 
 	//compare the results received with the expected value
-	if got != expected {
-		t.Errorf("got %f expected %f", got, expected)
-	}
+	equal := withTolerance(got, expected)
 
+	if equal != true {
+		t.Errorf("got %f, expected %f", got, expected)
+	}
 }
 
 func TestPerimeter(t *testing.T) {
@@ -30,12 +31,14 @@ func TestPerimeter(t *testing.T) {
 		base:   5,
 		height: 3,
 	}
-	got1 := t1.perimeter()
+	got := t1.perimeter()
 
 	//what i should get back:
-	expected1 := 13.830952
+	expected := 13.830952
 
-	if got1 != expected1 {
-		t.Errorf("got %f expected %f", got1, expected1)
+	equal := withTolerance(got, expected)
+
+	if equal != true {
+		t.Errorf("got %f, expected %f", got, expected)
 	}
 }
