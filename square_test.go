@@ -15,8 +15,9 @@ func TestSquare(t *testing.T) {
 		if sA_expected != sA {
 			t.Errorf("got %f, expected %f", sA, sA_expected)
 		}
+		if sP_expected != sP {
+			t.Errorf("got %f, expected %f", sP, sP_expected)
+		}
 	}
-	if sP_expected != sP {
-		t.Errorf("got %f, expected %f", sP, sP_expected)
-	}
+
 }
